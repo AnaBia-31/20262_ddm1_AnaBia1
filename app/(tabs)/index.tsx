@@ -1,14 +1,14 @@
 import { Image } from 'expo-image';
 import { StyleSheet } from 'react-native';
 
-import ParallaxScrollView from '@/components/parallax-scroll-view';
+import ScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { Link } from 'expo-router';
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
+    <ScrollView
       headerBackgroundColor={{
         light: '#d9a1dc',
         dark: '#471d41',
@@ -22,17 +22,17 @@ export default function HomeScreen() {
     >
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">
-          Olá! Eu sou a Ana Bia.
+          Olá! Eu sou a Anna de Arendelle.
         </ThemedText>
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">
-          Apenas aprendendo a mexer
+          Tenho 21 anos
         </ThemedText>
 
         <ThemedText>
-          Não se apresse, ó leitor.
+          e sou a rainha do meu povo.
         </ThemedText>
       </ThemedView>
 
@@ -40,7 +40,7 @@ export default function HomeScreen() {
         <Link href="/modal">
           <Link.Trigger>
             <ThemedText type="subtitle">
-              Eu quero ser publicitária.
+              Tenho uma irmã com poderes de gelo.
             </ThemedText>
           </Link.Trigger>
 
@@ -71,22 +71,22 @@ export default function HomeScreen() {
         </Link>
 
         <ThemedText>
-          Apenas estou aqui por conveniência.
+          Um boneco de neve falante e um noivo muito gato.
         </ThemedText>
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">
-          Quando esta coisa funciona, é bem legal
+          Vou me casar em breve.
         </ThemedText>
 
         <ThemedText>
           <ThemedText type="defaultSemiBold">
-            Mas na maior parte das vezes esta coisa me deixa fula.
+            E uma vilã vai invadir minha festa.
           </ThemedText>
         </ThemedText>
       </ThemedView>
-    </ParallaxScrollView>
+    </ScrollView>
   );
 }
 

@@ -3,7 +3,7 @@ import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/ui/collapsible';
 import { ExternalLink } from '@/components/external-link';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
+import ScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
@@ -11,12 +11,12 @@ import { Fonts } from '@/constants/theme';
 
 export default function TabTwoScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+    <ScrollView
+      headerBackgroundColor={{ light: '#d9a1dc', dark: '#471d41' }}
       headerImage={
         <IconSymbol
           size={310}
-          color="#808080"
+          color="#471d41"
           name="chevron.left.forwardslash.chevron.right"
           style={styles.headerImage}
         />
@@ -27,28 +27,18 @@ export default function TabTwoScreen() {
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Descubra sobre mim
         </ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>Clique nas fofocas abaixo e descubra o que aconteceu. </ThemedText>
+      <Collapsible title="Minha irmã quase congelou meu coração!">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          <ThemedText type="defaultSemiBold">Ela congelou minha cabeça quando éramos crianças, um troll mágico me fez esquecer que ela tinha poderes, crescemos isoladas e quando descobri a verdade, ela ficou assustada e congelou meu coração sem querer. Mas o nosso amor foi mais forte e me salvou.</ThemedText> 
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      <Collapsible title="Conheci meu noivo quando fui atrás da minha irmã assustada.">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+          <ThemedText type="defaultSemiBold">Eu estava noiva de outra pessoa na época - que quase me matou depois, inclusive - mas mesmo assim ele me ajudou até o fim e bom, estamos juntos desde então.</ThemedText>
         </ThemedText>
       </Collapsible>
       <Collapsible title="Images">
@@ -88,13 +78,13 @@ export default function TabTwoScreen() {
         {Platform.select({
           ios: (
             <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
+              The <ThemedText type="defaultSemiBold">components/ScrollView.tsx</ThemedText>{' '}
               component provides a parallax effect for the header image.
             </ThemedText>
           ),
         })}
       </Collapsible>
-    </ParallaxScrollView>
+    </ScrollView>
   );
 }
 
