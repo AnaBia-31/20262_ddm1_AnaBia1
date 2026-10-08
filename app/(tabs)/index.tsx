@@ -10,84 +10,36 @@ export default function HomeScreen() {
   return (
     <ScrollView
       headerBackgroundColor={{
-        light: '#d9a1dc',
+        light: '#464546',
         dark: '#471d41',
       }}
       headerImage={
         <Image
-          source={require('@/assets/images/Anna-PNG-Image.png')}
+          source={require('@/assets/images/capitaoxtony.webp')}
           style={styles.headerImage}
         />
       }
     >
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">
-          Olá! Eu sou a Anna de Arendelle.
+          Guerra Civil: quem estava certo?
         </ThemedText>
       </ThemedView>
 
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">
-          Tenho 21 anos
-        </ThemedText>
-
-        <ThemedText>
-          e sou a rainha do meu povo.
+      <ThemedView>
+        <ThemedText style={{ fontSize: 20 }}>
+          Hoje vamos julgar os prós e contras da versão do Homem de Ferro e do Capitão América sobre a situação da Guerra Civil.
         </ThemedText>
       </ThemedView>
 
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">
-              Tenho uma irmã com poderes de gelo.
-            </ThemedText>
-          </Link.Trigger>
+<Image
+          source={require('@/assets/images/images.jpg')}
+        />
 
-          <Link.Preview />
-
-          <Link.Menu>
-            <Link.MenuAction
-              title="Action"
-              icon="cube"
-              onPress={() => alert('Action pressed')}
-            />
-
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
-
-        <ThemedText>
-          Um boneco de neve falante e um noivo muito gato.
-        </ThemedText>
-      </ThemedView>
-
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">
-          Vou me casar em breve.
-        </ThemedText>
-
-        <ThemedText>
-          <ThemedText type="defaultSemiBold">
-            E uma vilã vai invadir minha festa.
-          </ThemedText>
-        </ThemedText>
-      </ThemedView>
     </ScrollView>
   );
+ 
+  
 }
 
 const styles = StyleSheet.create({
